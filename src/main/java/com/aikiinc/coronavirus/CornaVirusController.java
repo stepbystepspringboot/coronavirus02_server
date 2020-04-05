@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@CrossOrigin(origins = "https://pure-shore-41784.herokuapp.com", maxAge = 3600)
+//@CrossOrigin(origins = "https://pure-shore-41784.herokuapp.com", maxAge = 3600)
 //@CrossOrigin(origins = "http://localhost:9000", maxAge = 3600)
 //@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
