@@ -35,7 +35,7 @@ public class CornaVirusController implements CoronaVirusService {
 		this.coronaVirusProcessing = process;
 
 		if (coronaVirusProcessing != null) {
-			log.info("Calling darocessing processing");
+			log.info("Calling data processing");
 			coronaVirusProcessing.process();
 		}
 	}
@@ -66,6 +66,8 @@ public class CornaVirusController implements CoronaVirusService {
 
 	@GetMapping(value = "/list")
 	public List<CoronaVirus> getCoronaVirusList() {
+		log.info("List all");
+		
 		return coronaVirusProcessing.getCoronaVirusList();
 	}
 
