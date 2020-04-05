@@ -20,9 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-//@CrossOrigin(origins = "https://pure-shore-41784.herokuapp.com", maxAge = 3600)
-//@CrossOrigin(origins = "http://localhost:9000", maxAge = 3600)
-//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = { "http://localhost:9000", "http://localhost:4200", "https://pure-shore-41784.herokuapp.com" })
 @RestController
 @RequestMapping("/api/virus/corona")
 public class CornaVirusController implements CoronaVirusService {
@@ -67,7 +65,7 @@ public class CornaVirusController implements CoronaVirusService {
 	@GetMapping(value = "/list")
 	public List<CoronaVirus> getCoronaVirusList() {
 		log.info("List all");
-		
+
 		return coronaVirusProcessing.getCoronaVirusList();
 	}
 
